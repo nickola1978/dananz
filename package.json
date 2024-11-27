@@ -10,7 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "gulp": "^5.0.0",
+    "gulp-cli": "^3.0.0",
     "gulp-rigger": "^0.5.8"
-  },
-  "devDependencies": {}
+  }
 }
