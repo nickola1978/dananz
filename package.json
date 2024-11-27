@@ -1,0 +1,16 @@
+{
+  "name": "dananz",
+  "version": "1.0.0",
+  "description": "HTML code training",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "gulp": "^5.0.0",
+    "gulp-rigger": "^0.5.8"
+  },
+  "devDependencies": {}
+}
