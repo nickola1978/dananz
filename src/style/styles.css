@@ -1,5 +1,9 @@
+* {
+  margin: 0;
+}
 
 .container {
-  max-width: 1024px;
-  background-color: blue;
+  max-width: 1170px;
+  margin: 0 auto;
+  background-color: #eef;
 }
