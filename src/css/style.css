@@ -7,3 +7,46 @@
   margin: 0 auto;
   background-color: #eef;
 }
+
+.header-wrapper {
+  display: flex;
+  height: 54px;
+  gap: 74px;
+  background-color: red;
+}
+
+.header-logo {
+  min-width: 126px;
+  height: 54px;
+  background: url("/img/dananz.png") no-repeat;
+  background-color: yellow;
+}
+
+.header-nav {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 74px;
+  background-color: yellowgreen;
+}
+
+.header-nav-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.header-nav-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+}
+
+.header-contactbtn {
+  display: flex;
+  min-width: 142px;
+  height: 49px;
+}

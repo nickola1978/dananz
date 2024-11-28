@@ -2,6 +2,22 @@
 
 const gulp = require('gulp');
 const rigger = require('gulp-rigger');  // позволяет поддерживать конструкции вида: //= template.html
+const browserSync = require("browser-sync");
+const reload = browserSync.reload;
+
+const config = {
+  server: {
+      baseDir: "./build"
+  },
+  tunnel: false,
+  host: 'localhost',
+  port: 9000,
+  logPrefix: "__dev_srv"
+};
+
+gulp.task('webserver',  () => 
+  browserSync(config)
+);
 
 const path = {
   src: {
@@ -12,11 +28,13 @@ const path = {
   },
   build: {
     html: 'build/',
-    css: 'src/style/',
-    js: 'src/script/',
-    img: 'src/images/'
+    css: 'build/css/',
+    js: 'build/js/',
+    img: 'build/img/'
   }
 }
+
+
 
 gulp.task('html:build', () => 
   gulp.src(path.src.html)               // выберем файлы по нужному пути
@@ -30,10 +48,16 @@ gulp.task('css:build', () =>
     .pipe(gulp.dest(path.build.css))
 );
 
+gulp.task('img:build', () => 
+  gulp.src(path.src.img, { encoding: false })
+    .pipe(gulp.dest(path.build.img))
+);
+
 gulp.task('default', 
   gulp.series(
     'html:build',
-    'css:build'
+    'css:build',
+    'img:build'
   )
 );
 
