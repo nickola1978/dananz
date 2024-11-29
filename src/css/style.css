@@ -1,26 +1,40 @@
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Poppins"),
+       url("/fonts/Poppins-Regular.ttf");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+                 U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193,
+                 U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
 * {
   margin: 0;
   padding: 0;
 }
 
 .container {
-  max-width: 1170px;
+  max-width: 1440px;
   margin: 0 auto;
-  background-color: #eef;
+  background-color: D9D9D9;
+  height: 2048px;
 }
 
 .header-wrapper {
   display: flex;
+  padding: 40px 120px 0;
   height: 54px;
   gap: 74px;
-  background-color: red;
+  font-family: "Poppins", sans-serif;
+  font-size: 14pt;
 }
 
 .header-logo {
   min-width: 126px;
   height: 54px;
   background: url("/img/dananz.png") no-repeat;
-  background-color: yellow;
 }
 
 .header-nav {
@@ -30,7 +44,6 @@
   justify-content: flex-end;
   align-items: center;
   gap: 74px;
-  background-color: yellowgreen;
 }
 
 .header-nav-bar {
@@ -38,19 +51,16 @@
   width: 498px;
   flex-direction: row;
   justify-content: space-between;
-  background-color: blueviolet;
 }
 
 .header-nav-item {
-  /* display: flex; */
   list-style-type: none;
-  border: salmon 1px solid;
 }
 
 .header-contactbtn {
   display: flex;
-  min-width: 142px;
-  height: 49px;
+  min-width: 140px;
+  height: 47px;
   justify-content: center;
   align-items: center;
   background-color: #2C3878;

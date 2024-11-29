@@ -15,7 +15,7 @@ const config = {
   logPrefix: "__dev_srv"
 };
 
-gulp.task('webserver',  () => 
+gulp.task('web',  () => 
   browserSync(config)
 );
 
@@ -24,13 +24,15 @@ const path = {
     html: 'src/*.html',
     css: 'src/css/*.css',
     js: 'src/js/*.js',
-    img: 'src/img/**/*.*'
+    img: 'src/img/**/*.*',
+    font: `src/fonts/**/*.*`
   },
   build: {
     html: 'build/',
     css: 'build/css/',
     js: 'build/js/',
-    img: 'build/img/'
+    img: 'build/img/',
+    font: 'build/fonts/'
   }
 }
 
@@ -53,11 +55,17 @@ gulp.task('img:build', () =>
     .pipe(gulp.dest(path.build.img))
 );
 
+gulp.task('font:build', () => 
+  gulp.src(path.src.font, { encoding: false })
+    .pipe(gulp.dest(path.build.font))
+);
+
 gulp.task('default', 
   gulp.series(
     'html:build',
     'css:build',
-    'img:build'
+    'img:build',
+    'font:build'
   )
 );
 
